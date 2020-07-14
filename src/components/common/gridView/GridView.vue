@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-29 00:57:54
- * @LastEditTime: 2020-03-29 00:58:05
- * @LastEditors: your name
+ * @LastEditTime: 2020-04-25 23:16:02
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\components\common\gridView\GirdView.vue
  -->

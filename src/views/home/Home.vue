@@ -137,6 +137,8 @@
                   this.goods[type].page += 1
 
                   this.$refs.scroll.finishPullUp()
+                  console.log(res);
+                  
                 })
              }
             }

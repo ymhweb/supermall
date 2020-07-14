@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-29 01:55:30
- * @LastEditTime: 2020-03-29 01:55:51
- * @LastEditors: your name
+ * @LastEditTime: 2020-04-27 21:39:15
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\profile\childComps\UserInfo.vue
  -->
@@ -16,7 +16,7 @@
       </slot>
       <div class="login-info left">
         <slot name="user-nickname">
-          <div>登录/注册</div>
+          <div><span @click="logClick">登录</span>/<span @click="regClick">注册</span></div>
         </slot>
         <div class="phone">
           <span>
@@ -32,7 +32,15 @@
 
 <script>
 	export default {
-		name: "UserInfo"
+    name: "UserInfo",
+    methods:{
+      regClick(){
+        this.$router.replace('/register')
+      },
+      logClick(){
+        this.$router.replace('/login')
+      }
+    }
 	}
 </script>
 

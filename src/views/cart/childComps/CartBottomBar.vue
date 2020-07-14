@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-26 00:48:41
- * @LastEditTime: 2020-03-28 01:42:44
+ * @LastEditTime: 2020-05-01 22:14:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\cart\childComps\CartBottomBar.vue
@@ -18,7 +18,7 @@
             合计:{{totalPrice}}
         </div>
 
-        <div class="calculate">
+        <div class="calculate" @click="calClick">
             去计算：{{checkLength}}
         </div>    
     </div>
@@ -31,6 +31,11 @@ export default {
     name: "CartBottomBar",
     components:{
         CheckButton
+    },
+    data(){
+        return{
+            arr: null
+        }
     },
     computed:{
         totalPrice(){
@@ -57,6 +62,14 @@ export default {
                 this.$store.state.cartList.forEach(item => item.checked = true)
             }
             
+        },
+        calClick(totalPrice){
+            if(this.checkLength==0){
+                this.$toast.show('没有选中的商品',1500)
+            }else{
+                this.$router.replace({path:'/confirmpay',query:{tit:this.totalPrice}});
+                
+            }
         }
     }
 }

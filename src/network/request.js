@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2019-12-23 20:29:00
- * @LastEditTime: 2020-04-07 16:41:42
+ * @LastEditTime: 2020-05-06 11:40:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\network\request.js
@@ -13,7 +13,8 @@ export function request(config) {
   const instance = axios.create({
     // baseURL: 'http://123.207.32.32:8000/api/wh',
     // baseURL: 'http://106.54.54.237:8000/api/h3',
-    baseURL: 'http://152.136.185.210:8000/api/h8',
+    // baseURL: 'http://152.136.185.210:8000/api/h8',
+    baseURL: "http://123.207.32.32:8000/api/m3",
     timeout: 5000
   })
   //请求拦截

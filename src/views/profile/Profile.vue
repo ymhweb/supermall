@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2019-12-19 23:26:15
- * @LastEditTime: 2020-03-29 02:05:08
+ * @LastEditTime: 2020-05-01 22:20:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \supermall\src\views\profile\Profile.vue
@@ -32,7 +32,7 @@
         </section>
 
         <list-view :list-data="orderList" class="order-list"></list-view>
-        <list-view :list-data="serviceList" class="service-list"></list-view>
+        <list-view :list-data="serviceList" class="service-list" @click.native="myClick"></list-view>
     </div>
 </template>
 
@@ -57,11 +57,16 @@ import ListView from './childComps/ListView'
           {icon: '#vip', iconColor: '#ffc636', info: '会员卡'},
         ],
         serviceList: [
-          {icon: '#service', iconColor: '#ff8198', info: '我的购物车'},
+          {icon: '#service', iconColor: '#ff8198', info: '我的订单'},
           {icon: '#download', iconColor: '#ff8198', info: '下载购物APP'},
         ]
       }
     },
+    methods:{
+      myClick(){
+        this.$router.replace('/alreadybuy')       
+      }
+    }
     }
 </script>
 

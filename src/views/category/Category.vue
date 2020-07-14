@@ -6,12 +6,10 @@
                 @selectItem="selectItem">
       </tab-menu>
       <scroll id="tab-content" :data="[categoryData]">
-        <div>
           <tab-control :titles="['综合', '新品', '销量']"
           @tabClick="tabClick"></tab-control>
           <tab-content-category :subcategories="showSubcategory"></tab-content-category>
           <tab-content-detail :category-detail="showCategoryDetail"></tab-content-detail>
-        </div>
       </scroll>
     </div>
   </div>
