@@ -12,7 +12,7 @@
     "core-js": "^3.4.3",
     "element-ui": "^2.13.1",
     "fastclick": "^1.0.6",
-    "postcss": "^7.0.26",
+    "postcss": "^8.2.10",
     "postcss-px-to-viewport": "^1.1.1",
     "px-to-viewport": "^1.0.0",
     "swiper": "^5.2.1",
